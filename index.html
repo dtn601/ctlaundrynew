@@ -53,15 +53,41 @@
 	.ctshow{
 		display:none;
 	}
-	      #map {
-        height: 400px;  /* The height is 400 pixels */
+	#SCmap {
+        height: 300px;  /* The height is 400 pixels */
         width: 100%;  /* The width is the width of the web page */
        }
+  	#CTmap {
+        height: 300px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+	#SCmap2 {
+        height: 500px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+  	#CTmap2 {
+        height: 500px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    #modal1, #modal2 {
+    	list-style-type: none;
+    }       
+    #modalSide1, #modalSide2 {
+		padding: 0px;
+    }
+    .text{
+		padding: 0 1em;
+    }
+    .headers{
+		padding: 1em;
+    }
+    .modalSide .divider {
+    	background-color: black;
+    }
 </style>
 	
 
 <body>
-
   <!-- navbar -->
 	<header id="header">
 		<nav class="nav-wrapper transparent">
@@ -93,9 +119,359 @@
 			</div>
 		</nav>
 	</header>
- <!-- Content -->
- <div class="content"></div>
- <div id='map'></div>
+ <!-- Locations -->
+ 
+<!-- CT -->
+	<section class="container section scrollspy" id="location">
+		<div class="row">
+			<div class="col s12 l12">
+				<h1>Locations</h1>
+		</div>	
+		<div class="col s12 l6">
+			<div class="card">
+		        <div class="card-image">
+	  	            <img src="img/southaustin.jpg">
+		            <span class="card-title">CT Laundry</span>
+		            <a data-target="slide-out-ct" class="btn-floating halfway-fab waves-effect waves-light red sidenav-trigger"><i class="material-icons">add</i></a>
+		        </div>
+		        <div class="card-content">
+		            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias tempore blanditiis, libero laborum officia consectetur doloribus debitis, consequatur harum nulla possimus eveniet dignissimos sit, quia omnis veritatis ex. Eveniet, qui.</p>
+		        </div>
+			</div>
+		</div>
+<!-- CT Side Nav -->					
+		<ul id="slide-out-ct" class="sidenav navlocal">
+		    <li>
+		    	<div class="user-view">
+		      		<div class="background">
+		        		<img src="img/foldedtees.jpg">
+		      		</div>
+		      		<a href="#ctlaundry" data="southaustin.html" class="links"><img class="circle sidenav-close" src="img/foldedtees.jpg"></a>
+
+		      		<a href="#"><span class="white-text">CT Laundry</span></a>
+		    	</div>
+		    </li> 
+		    <li class="sidenavheader">DETAILS</li>
+		      <li><div class="divider"></div></li>
+		      <li>
+		      	<span class="sidenavheader"><i class="material-icons tiny">location_on</i>ADDRESS</span>
+		      	<ul>
+		      		<li class="hours">111 W. William Cannon Dr.</li>
+		      		<li class="hours">Suite 308</li>
+		      		<li class="hours">Austin, TX 78745</li>
+		      	</ul>
+		      </li>
+		    <li><div class="divider"></div></li>
+		      <li>
+		      	<span class="sidenavheader"><i class="material-icons tiny">local_phone</i>PHONE NUMBER</span>
+		      	<ul>
+		      		<li class="hours">512-916-9096</li>
+		      	</ul>	
+		      </li>					      
+		      <li><div class="divider"></div></li>
+		      <li><span class="sidenavheader"><i class="material-icons tiny">access_time</i>HOURS</span>
+		      <ul>
+			      <li class="hours">Monday: 7:00am - 10:pm</li>
+			      <li class="hours">Tuesday: 7:00am - 10:pm</li>
+			      <li class="hours">Wednesday: 7:00am - 10:pm</li>
+			      <li class="hours">Thursday: 7:00am - 10:pm</li>
+			      <li class="hours">Friday: 7:00am - 10:pm</li>
+			      <li class="hours">Saturday: 7:00am - 10:pm</li>
+			      <li class="hours">Sunday: 7:00am - 10:pm</li>				      	
+		      </ul>
+		  	  </li>
+		      <li><div class="divider blue-grey"></div></li>
+		      <li class="sidenavheader"><span><i class="material-icons tiny">map</i>MAP</span>
+				 <div id='CTmap'></div>
+		      </li>
+		      <li class="center">
+		      	<a href="#modal1" data="southaustin.html" class="links btn modal-trigger sidenav-close">More Details</a>
+		      </li>
+	    </ul>			  
+
+  <!-- CT Modal -->
+		<div id="modal1" class="modal modal-fixed-footer">
+		    <div class="modal-content">
+		    	<div class="col s12 m12 l12">
+		    		<h4>CT Laundry</h4>
+		    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit unde molestias reiciendis a rerum laboriosam, natus iusto magnam amet doloremque, animi distinctio sapiente. Sint, fugiat porro, quia earum placeat sapiente!</p>
+		    	</div>
+		    	<div id="modalSide1" class="modalSide col s12 m12 l4 blue-grey lighten-4">
+				    <li class="headers">DETAILS</li>
+				      <li><div class="divider"></div></li>
+				      <li class="headers">
+				      	<span><i class="material-icons tiny">location_on</i>ADDRESS</span>
+				      	<ul>
+				      		<li class="text">111 W. William Cannon Dr.</li>
+				      		<li class="text">Suite 308</li>
+				      		<li class="text">Austin, TX 78745</li>
+				      	</ul>
+				      </li>
+				    <li><div class="divider"></div></li>
+				      <li class="headers">
+				      	<span><i class="material-icons tiny">local_phone</i>PHONE NUMBER</span>
+				      	<ul>
+				      		<li class="text">512-916-9096</li>
+				      	</ul>	
+				      </li>					      
+				      <li><div class="divider"></div></li>
+				      <li class="headers"><span><i class="material-icons tiny">access_time</i>HOURS</span>
+				      <ul>
+					      <li class="text">Monday: 7am - 10pm</li>
+					      <li class="text">Tuesday: 7am - 10pm</li>
+					      <li class="text">Wednesday: 7am - 10pm</li>
+					      <li class="text">Thursday: 7am - 10pm</li>
+					      <li class="text">Friday: 7am - 10pm</li>
+					      <li class="text">Saturday: 7am - 10pm</li>
+					      <li class="text">Sunday: 7am - 10pm</li>				      	
+				      </ul>
+				  	  </li>
+				</div>
+				<div class="col s12 m12 l8">
+					<h5>Services</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, fuga, blanditiis. Asperiores inventore, velit tempora consequuntur, facere, harum provident voluptatibus officiis sit, similique earum. Architecto saepe reprehenderit, dolorum aliquam consequatur?</p>	
+				</div>
+				<div class="col s12 m12 l12">
+				      <li><div class="divider"></div></li>
+				      <li class="headers"><span><i class="material-icons tiny">map</i>MAP</span>
+						 <div id='CTmap2'></div>
+				      </li>								
+				</div>
+		    </div>
+		    <div class="modal-footer">
+		        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+		    </div>
+		</div>
+<!-- Spincycle -->			
+		<div class="col s12 l6">
+			<div class="card">
+			    <div class="card-image">
+			        <img src="img/northaustin.jpg">
+			        <span class="card-title">SpinCycle Laundry</span>
+			        <a data-target="slide-out-sc" class="btn-floating halfway-fab waves-effect waves-light red sidenav-trigger"><i class="material-icons">add</i></a>
+			    </div>
+			    <div class="card-content">
+			          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias tempore blanditiis, libero laborum officia consectetur doloribus debitis, consequatur harum nulla possimus eveniet dignissimos sit, quia omnis veritatis ex. Eveniet, qui.</p>
+			    </div>
+			</div>
+		</div>
+<!-- Spincycle Side Nav -->				      
+		<ul id="slide-out-sc" class="sidenav navlocal">
+		    <li>
+		    	<div class="user-view">
+		      		<div class="background">
+		        		<img src="img/foldedtees.jpg">
+		      		</div>
+		      		<a href="#"><img class="circle" src="img/foldedtees.jpg"></a>
+		      		<a href="#"><span class="white-text">SpinCycle Laundry</span></a>
+		    	</div>
+		    </li> 
+		    <li class="sidenavheader">DETAILS</li>
+		      	<li><div class="divider"></div></li>
+		      	<li>
+		      	<span class="sidenavheader"><i class="material-icons tiny">location_on</i>ADDRESS</span>
+			      	<ul>
+			      		<li class="hours">9717 N. Lamar Blvd</li>
+			      		<li class="hours">Suite A/B</li>
+			      		<li class="hours">Austin, TX 78753</li>
+			      	</ul>
+		     	</li>
+			<li><div class="divider"></div></li>
+	      	<li>
+	      	<span class="sidenavheader"><i class="material-icons tiny">local_phone</i>PHONE NUMBER</span>
+	      	<ul>
+	      		<li class="hours">512-916-9096</li>
+	      	</ul>
+	      	</li>						      
+	      	<li><div class="divider"></div></li>
+	        <li><span class="sidenavheader"><i class="material-icons tiny">access_time</i>HOURS</span>
+		        <ul>
+			        <li class="hours">Monday: 7:00am - 10:pm</li>
+			        <li class="hours">Tuesday: 7:00am - 10:pm</li>
+			        <li class="hours">Wednesday: 7:00am - 10:pm</li>
+			        <li class="hours">Thursday: 7:00am - 10:pm</li>
+			        <li class="hours">Friday: 7:00am - 10:pm</li>
+			        <li class="hours">Saturday: 7:00am - 10:pm</li>
+			        <li class="hours">Sunday: 7:00am - 10:pm</li>				      	
+		        </ul>
+	  	    </li>
+	    
+	      	<li><div class="divider"></div></li>
+	      	<li class="sidenavheader"><span><i class="material-icons tiny">map</i>MAP</span>
+				<div id='SCmap'></div>
+	      	</li>
+
+	      	<li class="center">
+	      		<a href="#modal2" data="northaustin.html" class="links btn modal-trigger sidenav-close">Find Out More</a>
+	      	</li>
+		</ul>			  
+  <!-- SC Modal -->
+		<div id="modal2" class="modal modal-fixed-footer">
+		    <div class="modal-content">
+		    	<div class="col s12 m12 l12">
+		    		<h4>CT Laundry</h4>
+		    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit unde molestias reiciendis a rerum laboriosam, natus iusto magnam amet doloremque, animi distinctio sapiente. Sint, fugiat porro, quia earum placeat sapiente!</p>
+		    	</div>
+		    	<div id="modalSide2" class="modalSide col s12 m12 l4 blue-grey lighten-4">
+				    <li class="headers">DETAILS</li>
+				      <li><div class="divider"></div></li>
+				      <li class="headers">
+				      	<span><i class="material-icons tiny">location_on</i>ADDRESS</span>
+				      	<ul>
+				      		<li class="text">111 W. William Cannon Dr.</li>
+				      		<li class="text">Suite 308</li>
+				      		<li class="text">Austin, TX 78745</li>
+				      	</ul>
+				      </li>
+				    <li><div class="divider"></div></li>
+				      <li class="headers">
+				      	<span><i class="material-icons tiny">local_phone</i>PHONE NUMBER</span>
+				      	<ul>
+				      		<li class="text">512-916-9096</li>
+				      	</ul>	
+				      </li>					      
+				      <li><div class="divider"></div></li>
+				      <li class="headers"><span><i class="material-icons tiny">access_time</i>HOURS</span>
+				      <ul>
+					      <li class="text">Monday: 7am - 10pm</li>
+					      <li class="text">Tuesday: 7am - 10pm</li>
+					      <li class="text">Wednesday: 7am - 10pm</li>
+					      <li class="text">Thursday: 7am - 10pm</li>
+					      <li class="text">Friday: 7am - 10pm</li>
+					      <li class="text">Saturday: 7am - 10pm</li>
+					      <li class="text">Sunday: 7am - 10pm</li>				      	
+				      </ul>
+				  	  </li>
+				</div>
+				<div class="col s12 m12 l8">
+					<h5>Services</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, fuga, blanditiis. Asperiores inventore, velit tempora consequuntur, facere, harum provident voluptatibus officiis sit, similique earum. Architecto saepe reprehenderit, dolorum aliquam consequatur?</p>	
+				</div>
+				<div class="col s12 m12 l12">
+				      <li><div class="divider"></div></li>
+				      <li class="headers"><span><i class="material-icons tiny">map</i>MAP</span>
+						 <div id='SCmap2'></div>
+				      </li>								
+				</div>
+		    </div>			
+		    <div class="modal-footer">
+		        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+		    </div>
+		</div>
+
+	</section>
+  <!-- parallax -->
+	<div class="parallax-container">
+		<div class="parallax">
+			<img src="img/sfhome.jpg" alt="" class="responsive-img">
+		</div>
+	</div>
+
+  <!-- services / tabs -->
+<section class="container section scrollspy" id="services">
+	<div class="row">
+		<div class="col s12 l3">
+			<h2 class="indigo-text text-darken-4">Services</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto alias provident placeat cupiditate doloremque, nemo accusantium reiciendis magni, veniam, nisi debitis dolore illo neque eligendi, esse. Ipsa vitae, nihil quidem!</p>
+		</div>
+		<div class="col s12 l7 offset-l2">
+			<ul class="tabs">
+				<li class="tab col s6">
+					<a href="#res" class="indigo-text text-darken-4">Residential</a>
+				</li>
+				<li class="tab col s6">
+					<a href="#com" class="indigo-text text-darken-4">Commercial</a>
+				</li>							
+			</ul>
+			<div class="col s12" id="res">
+				<p class="flow-text indigo-text text-darken-4">
+					Residential
+				</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex aliquid, animi atque voluptatum! Vitae nostrum temporibus officiis sequi, earum, quasi facilis! Consequatur corporis nemo similique quaerat optio quia dolorum hic.</p>
+			</div>
+			<div class="col s12" id="com">
+				<p class="flow-text indigo-text text-darken-4">
+					Commercial
+				</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex aliquid, animi atque voluptatum! Vitae nostrum temporibus officiis sequi, earum, quasi facilis! Consequatur corporis nemo similique quaerat optio quia dolorum hic.</p>
+						<form action="">
+				<div class="input-field">
+					<i class="material-icons prefix">assignment_ind</i>
+					<input type="text" id="name">
+					<label for="email">Your Name</label>
+				</div>
+				<div class="input-field">
+					<i class="material-icons prefix">email</i>
+					<input type="email" id="email">
+					<label for="email">Your Email</label>
+				</div>
+				<div class="input-field">
+					<i class="material-icons prefix">message</i>
+					<textarea id="message" class="materialize-textarea"></textarea>
+					<label for="message">Your Message</label>
+				</div>
+
+				<div class="input-field center">
+					<button class="btn">Submit</button>
+				</div>
+			</form>
+			</div>		
+		</div>
+	</div>
+
+</section>
+  <!-- parallax -->
+	<div class="parallax-container">
+		<div class="parallax">
+			<img src="img/homes.jpg" alt="" class="responsive-img">
+		</div>
+	</div>
+  <!-- contact form -->
+<section class="section container scrollspy" id="contact">
+	<div class="row">
+		<div class="col s12 l5">
+			<h2 class="indigo-text text-darken-4">Get In Touch</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia in temporibus quos fugit porro aliquam cupiditate ipsa, distinctio neque corrupti rem explicabo ab esse vitae consequatur, tempore assumenda recusandae! Tempora.</p>
+		</div>
+		<div class="col s12 l5 offset-l2">
+			<form action="">
+				<div class="input-field">
+					<i class="material-icons prefix">email</i>
+					<input type="email" id="email">
+					<label for="email">Your Email</label>
+				</div>
+				<div class="input-field">
+					<i class="material-icons prefix">message</i>
+					<textarea id="message" class="materialize-textarea"></textarea>
+					<label for="message">Your Message</label>
+				</div>
+				<div class="input-field">
+					<input type="text" id="date" class="datepicker">
+					<label for="date">Choose a date you need me for</label>
+				</div>
+				<div class="input-field">
+					<p>Services Required...</p>
+						<p>
+							<label>
+								<input type="checkbox">
+								<span>Photography</span>
+							</label>
+						</p>
+						<p>
+							<label>
+								<input type="checkbox">
+								<span>Editing</span>
+							</label>
+						</p>
+				</div>
+				<div class="input-field center">
+					<button class="btn">Submit</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>
+
 
   <!-- footer -->
 <footer class="page-footer grey darken-3">
@@ -124,9 +500,9 @@
 		</div>
 	</div>
 </footer>
-<!--    <script async defer
+   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNtpjSKyFxFAqM3rrU-VtY74XpZVOsB8c&callback=initMap">
-   </script> -->
+   </script>
   <!-- Compiled and minified JavaScript -->
 </body>
 </html>
